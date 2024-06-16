@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suwit Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 90%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .bot, .player {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .bot img, .player img {
+            width: 100px;
+            height: auto;
+        }
+        #suwitBot {
+            margin-bottom: 20px;
+        }
+        #suwitPlayer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        .gap {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gap:hover {
+            transform: scale(1.1);
+        }
+        .condition {
+            background-color: #ffd700;
+            color: #333;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .reset {
+            background-color: #ff4500;
+            color: white;
+            font-size: 2rem;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+        }
+        .reset:hover {
+            background-color: #ff6347;
+        }
+        .hidden {
+            display: none;
+        }
+        h1{
+            text-align: center;
+        }
+        #h2bot{
+            color: red;
+        }
+        #h2player{
+            color: blue;
+        }
+
+        #draw{
+            background-color: gray;
+            color: white;
+        }
+        #lose{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="omg">
+        <h1>GAME SUWIT JAWA</h1>
+        <div class="container bot">
+            <h2 id="h2bot">BOT :</h2>
+            <img src="img/semut.png" alt="Bot's choice" id="suwitBot " class="hidden semutBot">
+            <img src="img/orang.png" alt="Bot's choice" id="suwitBot " class="hidden orangBot">
+            <img src="img/gajah.png" alt="Bot's choice" id="suwitBot " class="hidden gajahBot"> 
+        </div>
+        <div class="condition container hidden" id="win">
+            <h3>WIN</h3>
+        </div>
+        <div class="condition container hidden" id="draw">
+            <h3>DRAW</h3>
+        </div>
+        <div class="condition container hidden" id="lose">
+            <h3>LOSE</h3>
+        </div>
+        <div class="container player">
+            <h2 id="h2player"> Player: </h2>
+            <div id="suwitPlayer">
+                <img src="img/semut.png" alt="Semut" class="gap" id="semut"> 
+                <img src="img/orang.png" alt="Orang" class="gap" id="orang">
+                <img src="img/gajah.png" alt="Gajah" class="gap" id="gajah">
+            </div>
+        </div>
+        <button class="container hidden reset" id="reset">Reset</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
