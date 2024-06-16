@@ -1,5 +1,6 @@
 // Manipulasi Node
 
+// deklarasi terlebih dahulu
 const pBaru = document.createElement('p'); // .createElement berfungsi untuk menambahkan tag element pada HTML
 const teksBaru = document.createTextNode('Paragraf Baru'); // .createTextNode berfungsi untuk membuat text ke dalam memori
 
