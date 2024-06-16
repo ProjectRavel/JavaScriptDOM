@@ -46,6 +46,11 @@
         .gap:hover {
             transform: scale(1.1);
         }
+        .gapactive{
+            border: green;
+            border: solid 3px lime;
+            border-radius: 100%;
+        }
         .condition {
             background-color: #ffd700;
             color: #333;
@@ -73,36 +78,42 @@
         .hidden {
             display: none;
         }
-        h1{
+        h1 {
             text-align: center;
         }
-        #h2bot{
+        #h2bot {
             color: red;
         }
-        #h2player{
+        #h2player {
             color: blue;
         }
-
-        #draw{
+        #draw {
             background-color: gray;
             color: white;
         }
-        #lose{
+        #lose {
             background-color: red;
+        }
+        @keyframes gacha {
+            0% { opacity: 1; }
+            25% { opacity: 0; }
+            50% { opacity: 1; }
+            75% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .gacha {
+            animation: gacha 1s steps(3) infinite;
         }
     </style>
 </head>
 <body>
-    
-
-
     <div class="omg">
         <h1>GAME SUWIT JAWA</h1>
         <div class="container bot">
             <h2 id="h2bot">BOT :</h2>
-            <img src="img/semut.png" alt="Bot's choice" id="suwitBot " class="hidden semutBot">
-            <img src="img/orang.png" alt="Bot's choice" id="suwitBot " class="hidden orangBot">
-            <img src="img/gajah.png" alt="Bot's choice" id="suwitBot " class="hidden gajahBot"> 
+            <img src="img/gajah.png" alt="Bot's choice" id="suwitBot" class="hidden gajahBot">
+            <img src="img/orang.png" alt="Bot's choice" id="suwitBot" class="hidden orangBot">
+            <img src="img/semut.png" alt="Bot's choice" id="suwitBot" class="hidden semutBot">
         </div>
         <div class="condition container hidden" id="win">
             <h3>WIN</h3>
@@ -114,16 +125,15 @@
             <h3>LOSE</h3>
         </div>
         <div class="container player">
-            <h2 id="h2player"> Player: </h2>
+            <h2 id="h2player">Player:</h2>
             <div id="suwitPlayer">
-                <img src="img/semut.png" alt="Semut" class="gap" id="semut"> 
+                <img src="img/semut.png" alt="Semut" class="gap" id="semut">
                 <img src="img/orang.png" alt="Orang" class="gap" id="orang">
                 <img src="img/gajah.png" alt="Gajah" class="gap" id="gajah">
             </div>
         </div>
         <button class="container hidden reset" id="reset">Reset</button>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>

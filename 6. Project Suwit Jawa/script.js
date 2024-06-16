@@ -12,7 +12,7 @@ const reset = document.querySelector("button#reset");
 gajah.addEventListener("click", function () {
   const botRandom = Math.round(Math.random() * 2);
   console.log(botRandom);
-
+  gajah.classList.add("gapactive")  
   if (
     botRandom == 0 &&
     orangBot.classList.contains("hidden") == true &&
@@ -45,6 +45,7 @@ gajah.addEventListener("click", function () {
 orang.addEventListener("click", function () {
     const botRandom = Math.round(Math.random() * 2);
     console.log(botRandom);
+    orang.classList.add("gapactive")  
   
     if (
       botRandom == 0 &&
@@ -78,7 +79,7 @@ orang.addEventListener("click", function () {
   semut.addEventListener("click", function () {
     const botRandom = Math.round(Math.random() * 2);
     console.log(botRandom);
-  
+    semut.classList.add("gapactive")
     if (
       botRandom == 0 &&
       orangBot.classList.contains("hidden") == true &&
@@ -104,7 +105,8 @@ orang.addEventListener("click", function () {
       semutBot.classList.remove("hidden");
       draw.classList.remove("hidden");
     } else {
-      location.reload();
+        location.reload()
     }
   });
+
   
