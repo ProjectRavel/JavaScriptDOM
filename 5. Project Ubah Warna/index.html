@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .merah{
+            background-color: red;
+            width: 45px;
+            height: 45px;
+            margin: 10px auto;
+        }
+        .hijau{
+            background-color: green;
+            width: 45px;
+            height: 45px;   
+            margin: 10px auto;
+        }
+        .biru{
+            background-color: blue;
+            width: 45px;
+            height: 45px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1 class="h1">Latihan DOM</h1>
+    <div class="button1">
+        <button>Ubah warna merah</button>
+    </div>
+    <br><br>
+    <div class="merah"></div>
+    <input type="range" name="rMerah" min="1" max="255" value="0"> <br>
+    <div class="hijau"></div>
+    <input type="range" name="rHijau" min="1" max="255" value="0"> <br>
+    <div class="biru"></div>
+    <input type="range" name="rBiru" min="1" max="255" value="0"> 
+    <script src="script.js"></script>
+</body>
+</html>
