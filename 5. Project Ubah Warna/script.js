@@ -1,4 +1,6 @@
-// Mendeklarasi Elemnt HTML
+// MEMBUAT PROJECT UBAH WARNA PADA WEBSITE DENGAN SERU DAN ASIK
+
+// Mendeklarasi Element HTML
 const button = document.querySelector('button');
 const body = document.querySelector('#body');
 const div = document.querySelector("div.button1")
