@@ -81,9 +81,7 @@
         h1 {
             text-align: center;
         }
-        #h2bot {
-            color: red;
-        }
+        
         #h2player {
             color: blue;
         }
@@ -104,12 +102,24 @@
         .gacha {
             animation: gacha 1s steps(3) infinite;
         }
+        .windiv{
+            background-color: yellow;
+            color: black;
+        }
+        .drawdiv{
+            background-color: gray;
+            color: black;
+        }
+        .losediv{
+            background-color: red;
+            color: black;
+        }
     </style>
 </head>
 <body>
     <div class="omg">
         <h1>GAME SUWIT JAWA</h1>
-        <div class="container bot">
+        <div class="container bot" id="divbot">
             <h2 id="h2bot">BOT :</h2>
             <img src="img/gajah.png" alt="Bot's choice" id="suwitBot" class="hidden gajahBot">
             <img src="img/orang.png" alt="Bot's choice" id="suwitBot" class="hidden orangBot">
