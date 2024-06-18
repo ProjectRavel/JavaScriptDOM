@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .thumbnail {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .thumb {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.2s;
+        }
+        .thumb:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 600px) {
+            .thumb {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .active {
+            opacity: 0.6;
+        }
+
+        @keyframes fadeIn {
+            to{
+                opacity: 1  ;
+            }
+        }
+
+        .fade{
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="img/1.jpeg" alt="Main Image" id="jumbo">
+    </div>
+    <div class="thumbnail">
+       <img src="img/1.jpeg" alt="Thumbnail 1" class="thumb active">
+        <img src="img/2.jpeg" alt="Thumbnail 2" class="thumb">
+        <img src="img/3.jpeg" alt="Thumbnail 3" class="thumb">
+        <img src="img/4.jpeg" alt="Thumbnail 4" class="thumb">
+        <img src="img/5.jpeg" alt="Thumbnail 5" class="thumb">
+        <img src="img/6.jpeg" alt="Thumbnail 6" class="thumb">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
